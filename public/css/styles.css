@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* ------- navbar partial ------- */
+
+.navbar {
+    margin: 10px;
+}
+
+.navbar ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.navbar ul li {
+    list-style-type: none;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color:white;
+
+    background-color: rgb(255, 51, 0);
+    padding: 10px;
+}
+
+/* ------- content partial ------- */
+.content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    justify-content: center;
+    padding: 100px;
+    gap: 20px;
+}
+
+/* ------- footer partial ------- */
+footer {
+    position: fixed;
+    bottom: 0;
+
+    width: 100%;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .content {
+        flex-direction: column;
+    }
+}
