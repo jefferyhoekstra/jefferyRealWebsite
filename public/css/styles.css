@@ -3,6 +3,7 @@
     padding: 0;
 }
 
+
 /* ------- navbar partial ------- */
 
 .navbar {
@@ -45,6 +46,9 @@ footer {
 
     width: 100%;
     text-align: center;
+
+    color: white;
+    background-color: rgb(255, 85, 42);
 }
 
 @media screen and (max-width: 768px) {

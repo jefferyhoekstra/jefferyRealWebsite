@@ -38,8 +38,7 @@ server.get("/", async (request, response) => {
     }
 
     response.render("layout", {
-        title: `${page} page`,
-        page: page,
+        page,
         music
     });
 });
