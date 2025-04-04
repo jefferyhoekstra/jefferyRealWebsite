@@ -178,10 +178,12 @@ header, footer {
 }
 
 .contact-form textarea {
-    height: 140px;
+    min-height: 150px;
+    max-height: 700px;
     padding-top: 15px;
-    border-radius: 500px;
-    resize:vertical;
+    border-radius: 10px;
+    resize: none;
+    overflow-y: auto;
 }
 
 .contact-inputs:focus {
