@@ -9,7 +9,8 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;    
+    justify-content: center; 
+    gap: 3em;
 }
 
 header, footer {
@@ -62,7 +63,7 @@ header, footer {
     }
 }
 
-/* ------- content partial ------- */
+/* ------- content partial HOME ------- */
 
 
 .content {
@@ -75,14 +76,14 @@ header, footer {
     padding: 1em;
     border-radius: 20px;
     border: 1px solid rgba(160, 160, 160, 0.8);
-
+    box-shadow: 0 0 18px rgba(0, 0, 0, 0.8);
     transition: ease-in-out 0.3s;
 }
 
 .content:hover {
     background-color: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.5);
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 18px rgba(255, 255, 255, 0.2);
 }
 
 .content p {
@@ -93,6 +94,30 @@ header, footer {
 .content img {
     vertical-align: bottom;
     margin-right: 0.5em
+}
+
+/* coding languages */
+.codeLanguages {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    width: clamp(300px, 50%, 650px);
+    padding: 1em;
+    box-shadow: 0 0 18px rgba(0, 0, 0, 0.8);
+    border-radius: 20px;
+
+    color: white;
+}
+
+.codeLanguages p {
+    font-size: 0.9em;
+    color: rgba(255, 255, 255, 0.7)
+}
+
+.codeLanguages img {
+    width: 40px;
+    height: 40px;
+    margin-right: 0.5em;
 }
 
 /* ------- footer partial ------- */
