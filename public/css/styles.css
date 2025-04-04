@@ -13,7 +13,7 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center; 
-    gap: 3em;
+    gap: 2em;
 }
 
 header, footer {
@@ -100,7 +100,7 @@ header, footer {
 }
 
 .content img {
-    vertical-align: bottom;
+    vertical-align: top;
     margin-right: 0.5em
 }
 
