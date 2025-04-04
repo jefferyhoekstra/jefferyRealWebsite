@@ -158,6 +158,6 @@ footer p {
 
 footer a {
     color: white;
-    text-decoration: wavy;
+    text-decoration: none;
     font-style: italic;
 }
