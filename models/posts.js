@@ -3,21 +3,25 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 // SCHEMA
-const musicSchema = new Schema ({
-    songName: {
+const postsSchema = new Schema ({
+    title: {
         type: String,
         required: true,
     },
-    songDate: {
-        type: Number,
+    date: {
+        type: String,
         required: true,
     },
-    songLink: {
+    author: {
+        type: String,
+        required: true,
+    },
+    content: {
         type: String,
         required: true,
     },
 });
 
 // -------- EXPORTING -------- \\
-const Music = mongoose.model("Music", musicSchema, "music");
-module.exports = Music;
+const Posts = mongoose.model("Posts", postsSchema, "posts");
+module.exports = Posts;

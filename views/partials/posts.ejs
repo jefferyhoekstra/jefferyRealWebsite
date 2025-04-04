@@ -1,0 +1,6 @@
+<% for(let i = 0; i < posts.length; i++) { %> 
+    <a href=/<%= posts[i]._id %>><div class="borderBox">
+        <h3><%= posts[i].title %></h2></a>
+            <p>Posted: <%= posts[i].date %> by <%= posts[i].author %></p>
+        </div>
+   <% } %>

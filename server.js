@@ -5,7 +5,7 @@ const mongoose = require("mongoose");
 require("dotenv").config();
 
 const server = express();
-const Music = require("./models/music");
+const Posts = require("./models/posts");
 const port = 3000;
 const { DB_URI } = process.env;
 //debug
@@ -25,13 +25,15 @@ mongoose
             console.log(`Connected to Databse ${mongoose.connection.name}\nServer is listening on port ${port}`);
             })).catch((error) => console.log(error));
 
+
+
 /// ------- ROUTES ------- \\\
 
 // index
 server.get("/", async (request, response) => {
     let { page } = request.query;
-    const music = await Music.find();
-
+    const posts = await Posts.find();
+    console.log(posts);
     if (page === undefined)
     {
         page = "home";
@@ -39,6 +41,20 @@ server.get("/", async (request, response) => {
 
     response.render("layout", {
         page,
-        music
+        posts
     });
+});
+
+// posts route
+server.get("/:id", async (request, response) => {
+    const { id } = request.params;
+    page = "singlePost";
+    try {
+        const post = await Posts.findById(id);
+        response.render("layout", { post, page });
+    }
+    catch (error) {
+        console.log(error);
+        response.status(500).render("404", { error });
+    }
 });
