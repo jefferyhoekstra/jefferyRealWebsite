@@ -1,6 +1,7 @@
 @import url('./sidebar.css');
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 html {
     background-color: rgb(15, 15, 15);
 }
@@ -12,11 +13,28 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; 
+    justify-content: center;
     gap: 2em;
+    /* animation */
+    opacity: 0;
+    /* Initially hidden */
+    animation: fadeIn 0.4s ease-in-out forwards;
 }
 
-header, footer {
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+header,
+footer {
     font-family: monospace;
 }
 
@@ -32,13 +50,15 @@ header, footer {
     margin: 4.5em auto;
 }
 
-.logo, .navcenter {
+.logo,
+.navcenter {
     display: flex;
     gap: 1.5em;
     list-style-type: none;
 }
 
-.logo a, .navcenter a {
+.logo a,
+.navcenter a {
     display: inline-block;
     color: rgb(255, 255, 255);
     font-size: 1.6em;
@@ -51,7 +71,8 @@ header, footer {
     text-decoration: none;
 }
 
-.logo a:hover, .navcenter a:hover {
+.logo a:hover,
+.navcenter a:hover {
     text-decoration: none;
     transform: scale(1.1);
     color: rgb(255, 170, 170);
@@ -66,7 +87,9 @@ header, footer {
         left: 0;
         right: 0;
     }
-    .logo a, .navcenter a {
+
+    .logo a,
+    .navcenter a {
         font-size: 1.4em;
     }
 }
@@ -75,7 +98,8 @@ header, footer {
 
 
 .borderBox {
-    text-align: left;;
+    text-align: left;
+    ;
     color: white;
     font-size: 1.3em;
     margin: 0;
@@ -159,11 +183,12 @@ header, footer {
     justify-content: center;
     gap: 1em;
 }
+
 .contact-form {
-    display:flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
-    gap:1em;
+    gap: 1em;
 }
 
 .contact-form .contact-inputs {
@@ -173,7 +198,7 @@ header, footer {
     outline: none;
     padding-left: 25px;
     font-weight: 500;
-    color:black;
+    color: black;
     border-radius: 50px;
 }
 
