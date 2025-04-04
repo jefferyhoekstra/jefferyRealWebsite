@@ -29,7 +29,7 @@ header, footer {
     justify-content: space-between;
     align-items: center;
     width: clamp(100px, 75%, 900px);
-    margin: 5em auto;
+    margin: 4.5em auto;
 }
 
 .logo, .navcenter {
@@ -141,11 +141,12 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    position: fixed;
+    position: relative;
     bottom: 0;
     text-align: center;
     width: 100%;
     color: white;
+    padding-top: 5em;
 }
 
 footer p {
@@ -153,4 +154,10 @@ footer p {
     display: inline-block;
     border-top: 1px solid white;
     padding-top: 0.5em;
+}
+
+footer a {
+    color: white;
+    text-decoration: wavy;
+    font-style: italic;
 }
