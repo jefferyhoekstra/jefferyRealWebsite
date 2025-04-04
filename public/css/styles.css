@@ -66,6 +66,9 @@ header, footer {
         left: 0;
         right: 0;
     }
+    .logo a, .navcenter a {
+        font-size: 1.4em;
+    }
 }
 
 /* ------- content partial HOME ------- */
