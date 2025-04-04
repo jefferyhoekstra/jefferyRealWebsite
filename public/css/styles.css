@@ -1,42 +1,105 @@
-* {
-    margin: 0;
-    padding: 0;
+html {
+    background-color: rgb(15, 15, 15);
 }
 
+/* ------- general styles ------- */
+main {
+    font-family: Verdana;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    
+}
+
+header, footer {
+    font-family: monospace;
+}
 
 /* ------- navbar partial ------- */
 
-.navbar {
-    margin: 10px;
-}
 
-.navbar ul {
+.nav-container {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    margin: 5em auto;
+
 }
 
-.navbar ul li {
-    list-style-type: none;
-}
-
-.navbar ul li a {
-    text-decoration: none;
-    color:white;
-
-    background-color: rgb(255, 51, 0);
-    padding: 10px;
-}
-
-/* ------- content partial ------- */
-.content {
+.logo, .navcenter {
     display: flex;
     flex-direction: row;
     align-items: center;
+    gap: 1.5em;
 
-    justify-content: center;
-    padding: 100px;
-    gap: 20px;
+    list-style-type: none;
+}
+
+.logo a, .navcenter a {
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    font-size: 1.2em;
+    transition: ease-in-out 0.2s;
+    transition: transform 0.1s ease-in-out;
+}
+
+.logo {
+    font-weight: bold;
+}
+
+.logo a:hover, .navcenter a:hover {
+    text-decoration: none;
+    transform: scale(1.1);
+    color: rgb(255, 200, 200);
+}
+
+
+@media screen and (max-width: 768px) {
+    .nav-container {
+        display: block;
+        width: 100%;
+        flex-direction: column;
+        left: 0;
+        right: 0;
+    }
+}
+
+/* ------- content partial ------- */
+
+
+.content {
+    text-align: left;;
+    color: white;
+    font-size: 1em;
+    margin: 0;
+
+    width: clamp(300px, 50%, 650px);
+    padding: 1em;
+    border-radius: 20px;
+    border: 1px solid rgba(160, 160, 160, 0.8);
+
+    transition: ease-in-out 0.3s;
+}
+
+.content:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.content p {
+    font-size: 0.9em;
+    color: rgba(255, 255, 255, 0.7)
+}
+
+.content img {
+    vertical-align: bottom;
+    margin-right: 0.5em
 }
 
 /* ------- footer partial ------- */
@@ -48,11 +111,4 @@ footer {
     text-align: center;
 
     color: white;
-    background-color: rgb(255, 51, 0);
-}
-
-@media screen and (max-width: 768px) {
-    .content {
-        flex-direction: column;
-    }
 }
